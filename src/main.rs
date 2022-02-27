@@ -14,13 +14,13 @@ fn simple_search(nums: Vec<i32>, target: i32) -> i32 {
 }
 
 fn binary_search(nums: Vec<i32>, target: i32) -> i32 {
-    let (mut left, mut right) = (0, nums.len() - 1);
+    let (mut left, mut right) = (0, (nums.len() - 1) as i32);
     while left <= right {
-        let pivot = (left + right) / 2;
-        if target == nums[pivot] {
+        let pivot = ((left + right) / 2) as i32;
+        if target == nums[pivot as usize] {
             return pivot as i32;
         }
-        if target < nums[pivot] {
+        if target < nums[pivot as usize] {
             right = pivot - 1
         } else {
             left = pivot + 1
