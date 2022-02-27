@@ -1,11 +1,10 @@
 mod binary_search;
 mod first_bad_version;
+mod search_insert_position;
 
 fn main() {
-    let result = binary_search::simple_search(vec![1, 2, 3, 4], 2);
-    let result2 = binary_search::binary_search(vec![-1, 0, 3, 5, 9, 12], 9);
+    let result = search_insert_position::search_insert(vec![1, 3, 5, 6], 2);
     println!("{}", result);
-    println!("{}", result2);
 }
 
 #[cfg(test)]

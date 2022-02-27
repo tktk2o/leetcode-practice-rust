@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn simple_search(nums: Vec<i32>, target: i32) -> i32 {
     let maybe_num = nums.iter().position(|&x| x == target);
     match maybe_num {
@@ -6,6 +7,7 @@ pub fn simple_search(nums: Vec<i32>, target: i32) -> i32 {
     }
 }
 
+#[allow(dead_code)]
 pub fn binary_search(nums: Vec<i32>, target: i32) -> i32 {
     let (mut left, mut right) = (0, (nums.len() - 1) as i32);
     while left <= right {

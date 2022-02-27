@@ -11,6 +11,7 @@ fn isBadVersion(versions: i32) -> bool {
 fn first_bad_version(n: i32) -> i32 {
     let (mut left, mut right) = (1, n);
     while left < right {
+        // avoid overflow of i32, same value with (left + right) / 2
         let pivot = left + (right - left) / 2;
         if isBadVersion(pivot) {
             right = pivot
