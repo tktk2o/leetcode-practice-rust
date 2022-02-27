@@ -10,7 +10,7 @@ fn isBadVersion(versions: i32) -> bool {
 #[allow(dead_code)]
 fn first_bad_version(n: i32) -> i32 {
     let (mut left, mut right) = (1, n);
-    while left <= right {
+    while left < right {
         let pivot = left + (right - left) / 2;
         if isBadVersion(pivot) {
             right = pivot
