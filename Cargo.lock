@@ -7,5 +7,9 @@ name = "leetcode-practice-rust"
 version = "0.1.0"
 
 [[package]]
+name = "rotate_array"
+version = "0.1.0"
+
+[[package]]
 name = "sorted_squares"
 version = "0.1.0"
